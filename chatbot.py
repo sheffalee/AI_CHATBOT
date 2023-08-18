@@ -3,7 +3,7 @@ import openai
 import streamlit as st
 
 headers={
-    "authorization":st.secrets["api_key"],
+    "authorization":st.secrets["API_KEY"],
     "content-type":"application/json"
 }
 # Initialize session state
