@@ -30,7 +30,7 @@ def generate_response(prompt):
     return message
 
 # Set up the Streamlit app title and styling
-st.title("ChatBot : Streamlit + openAI")
+st.title("Welcome to Chat.IO")
 st.markdown(
     """
     <style>
@@ -68,7 +68,7 @@ st.markdown(
 
 # Function to get user input
 def get_text():
-    input_text = st.text_input("Enter your queries here", key="input")
+    input_text = st.text_input("Let's chat ", key="input")
     return input_text
 
 # Get user input
