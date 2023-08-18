@@ -61,3 +61,31 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+# Function to get user input
+def get_text():
+    input_text = st.text_input("Enter your queries here", key="input")
+    return input_text
+
+# Get user input
+user_input = get_text()
+
+# Generate and display responses
+if user_input:
+    chat_entry = {
+        'user': user_input,
+        'chatbot': generate_response(user_input)
+    }
+    st.session_state.chat_history.append(chat_entry)
+
+# Display chat history
+if st.session_state.chat_history:
+    for entry in reversed(st.session_state.chat_history):
+        st.markdown(
+            f'<div class="chat-container">'
+            f'<div class="user-message">{entry["user"]}</div>'
+            f'<div class="chatbot-message">{entry["chatbot"]}</div>'
+            f'</div>',
+            unsafe_allow_html=True
+        )
+
