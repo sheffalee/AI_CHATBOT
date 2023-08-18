@@ -3,7 +3,7 @@ import openai
 import streamlit as st
 
 # Set the OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 # Initialize session state
 if 'chat_history' not in st.session_state:
