@@ -2,6 +2,11 @@
 import openai
 import streamlit as st
 
+from my_secrets import api_key
+
+# Set the OpenAI API key
+openai.api_key = api_key
+
 # Initialize session state
 if 'chat_history' not in st.session_state:
     st.session_state.chat_history = []
